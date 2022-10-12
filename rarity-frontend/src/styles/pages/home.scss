@@ -1,0 +1,141 @@
+.rarity-homepage {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.newest_collection {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.collection_container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 1em;
+  justify-content: center;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+
+  > div {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.recent_container {
+  margin: 2em 5em;
+  padding: 2em;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 1em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    margin: 2em;
+    padding: 1em;
+  }
+
+  > a {
+    width: 200px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.topcollection_container {
+  display: flex;
+  // flex-wrap: wrap;
+  // grid-gap: 1.5em;
+  // justify-content: center;
+
+  .topcollection {
+    border: 1px solid #e5e7eb;
+    padding: 0 1em;
+    border-radius: 10px;
+    width: 100%;
+
+    .topcollection_wrapper {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 1em;
+      padding-bottom: 1em;
+    }
+    .collection-item {
+      a {
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+      }
+    }
+  }
+}
+
+.topcollection_div {
+  padding: 3em 5em;
+
+  @media (max-width: 768px) {
+    padding: 2em;
+  }
+}
+
+.allcollection {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 5em;
+
+  @media (max-width: 768px) {
+    padding: 0 2em;
+  }
+
+  table {
+    margin: 0 auto;
+    width: inherit;
+  }
+
+  table,
+  tr,
+  th {
+    border-bottom: 1px solid rgba(190, 24, 93, 0.5);
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+  }
+
+  th {
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 10px 5px;
+    text-align: right;
+  }
+
+  td:nth-child(1) {
+    text-align: left;
+  }
+}
+
+h1 {
+  color: rgb(190, 24, 93);
+
+  @media (max-width: 576px) {
+    font-size: 1.5em;
+  }
+}
